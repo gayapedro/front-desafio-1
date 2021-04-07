@@ -33,7 +33,7 @@ nav {
   grid-template-columns: 140px min-content minmax(100px, 1fr) min-content 48px min-content 48px min-content 169px;
   align-items: center;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
-  margin-bottom: 56px;
+  margin-bottom: 0;
 }
 
 nav img {
@@ -59,11 +59,83 @@ nav :nth-child(4) {
 
 main {
   grid-area: main;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
   background-color: #ffffff;
-  height: 200px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  margin-bottom: 40px;
+}
+
+.post h1,
+.post h5,
+.post p,
+.post button {
+  margin-right: 25px;
+  margin-left: 25px;
+}
+
+.post h1 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 33px;
+  color: #000000;
+  margin-bottom: 5px;
+}
+
+.post h5 {
+  color: #929292;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.post img {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  align-self: stretch;
+}
+
+.par1 {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.post p {
+  line-height: 19px;
+  font-size: 14px;
+  color: #545454;
+}
+
+.post button {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  align-self: flex-end;
+  width: 154px;
+  height: 43px;
+  background-color: #ffffff;
+  border: 1px solid #fe0078;
+  border-radius: 20px;
+  font-size: 14px;
+  line-height: 19px;
+  color: #545454;
+}
+
+.post button:hover {
+  background-color: #fe0078;
+  color: #ffffff;
+}
+
+.post button:focus {
+  outline: none;
 }
 
 .sidebar {
@@ -163,4 +235,5 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #ffffff;
 }
