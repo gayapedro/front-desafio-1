@@ -14,9 +14,12 @@ body {
     ". main . side ."
     "footer footer footer footer footer";
   grid-template-columns:
-    1fr minmax(min-content, 730px) 50px minmax(min-content, 380px)
-    1fr;
-  grid-template-rows: 70px min-content 70px;
+    minmax(min-content, 100px) minmax(min-content, 2fr) 50px minmax(
+      min-content,
+      1fr
+    )
+    minmax(min-content, 100px);
+  grid-template-rows: min-content 1fr min-content;
   align-items: start;
   row-gap: 56px;
 }
@@ -59,4 +62,105 @@ main {
   display: grid;
   background-color: #ffffff;
   height: 200px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
+.sidebar {
+  grid-area: side;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
+.sidebar input {
+  padding: 17px 0 16px 20px;
+  border-radius: 10px;
+  width: 90%;
+  border: 1px solid #eeeeee;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.sidebar input:hover {
+  border-color: #fe0078;
+}
+
+.sidebar input:focus {
+  outline: none;
+  border-color: #fe0078;
+}
+
+.categorias {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.borda {
+  width: 2px;
+  height: 38px;
+  background-color: #fe0078;
+}
+
+.sidebar h2 {
+  margin-left: 11px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.categoria {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px dashed #eeeeee;
+}
+
+.categoria p {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.categoria a {
+  text-decoration: none;
+  color: #545454;
+}
+
+.categoria a:hover {
+  color: #fe0078;
+}
+
+.categoria:hover {
+  color: #fe0078;
+  border-color: #fe0078;
+}
+
+.publi {
+  width: 100%;
+  height: 150px;
+  background-color: #eeeeee;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 36px;
+  display: grid;
+  place-content: center;
+  line-height: 49px;
+}
+
+footer {
+  min-height: 70px;
+  grid-area: footer;
+  margin-bottom: 0;
+  background-color: #222222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
