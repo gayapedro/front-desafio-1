@@ -61,7 +61,6 @@ main {
   grid-area: main;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .post {
@@ -71,6 +70,7 @@ main {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   margin-bottom: 40px;
+  padding-bottom: 25px;
 }
 
 .post h1,
@@ -89,12 +89,36 @@ main {
   margin-bottom: 5px;
 }
 
+.post ul {
+  margin-left: 24px;
+}
+
+.list1 {
+  list-style-type: disc;
+}
+
+.list2 {
+  list-style-type: circle;
+}
+
+.italicparag {
+  font-style: italic;
+}
+
 .post h5 {
   color: #929292;
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;
   margin-top: 0;
+}
+
+h2 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 33px;
+  color: #000000;
 }
 
 .post img {
@@ -104,11 +128,6 @@ main {
   align-self: stretch;
 }
 
-.par1 {
-  margin-top: 24px;
-  margin-bottom: 24px;
-}
-
 .post p {
   line-height: 19px;
   font-size: 14px;
@@ -116,7 +135,6 @@ main {
 }
 
 .post button {
-  margin-bottom: 20px;
   margin-top: 20px;
   align-self: flex-end;
   width: 154px;
@@ -136,6 +154,81 @@ main {
 
 .post button:focus {
   outline: none;
+}
+
+label {
+  display: block;
+}
+
+.formulario {
+  display: grid;
+  grid-template-areas:
+    "nome email"
+    "comentario comentario"
+    ". botao";
+  gap: 24px;
+}
+
+.formulario input {
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.formulario input {
+  outline: none;
+  padding: 12px;
+}
+
+.formulario label {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height */
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.nome {
+  grid-area: nome;
+}
+
+.email {
+  grid-area: email;
+}
+
+.email input,
+.nome input {
+  width: 100%;
+}
+
+.comentario {
+  grid-area: comentario;
+}
+
+.comentario textarea {
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  border-radius: 2px;
+  resize: none;
+  width: 100%;
+  margin: 0;
+}
+
+.comentario textarea:focus {
+  outline: none;
+}
+
+.formulario button {
+  justify-self: end;
+  grid-area: botao;
+  background-color: #fe0078;
+  color: #ffffff;
+  font-weight: 700;
+  border: none;
+  border-radius: 20px;
+  padding: 12px 24px 12px 24px;
 }
 
 .sidebar {
@@ -217,7 +310,7 @@ main {
 
 .publi {
   width: 100%;
-  height: 150px;
+  height: 240px;
   background-color: #eeeeee;
   margin-top: 15px;
   margin-bottom: 15px;
