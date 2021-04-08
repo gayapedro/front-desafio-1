@@ -196,6 +196,7 @@ h2 {
 .post button:hover {
   background-color: #fe0078;
   color: #ffffff;
+  transition: all 1s ease;
 }
 
 .post button:focus {
@@ -379,11 +380,13 @@ label {
 
 .categoria a:hover {
   color: #fe0078;
+  transition: color 1s ease;
 }
 
 .categoria:hover {
   color: #fe0078;
   border-color: #fe0078;
+  transition: border-color 1s ease;
 }
 
 .publi {
