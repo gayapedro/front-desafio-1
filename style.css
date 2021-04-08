@@ -63,7 +63,8 @@ main {
   flex-direction: column;
 }
 
-.post {
+.post,
+.contato {
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
@@ -73,20 +74,65 @@ main {
   padding-bottom: 25px;
 }
 
-.post h1,
 .post h5,
-.post p,
-.post button {
+.post button,
+.contato h3 {
   margin-right: 25px;
   margin-left: 25px;
 }
 
-.post h1 {
+.titulocontato {
+  margin-right: 25px;
+  margin-left: 25px;
+  display: flex;
+  align-content: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.info {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.contato div p {
+  margin-left: 10px;
+  padding-left: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.contato h3 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.post p,
+.contato p {
+  margin-right: 25px;
+  margin-left: 25px;
+}
+
+.contato {
+  color: #000000;
+}
+
+.post h1,
+.contato h1 {
   font-weight: bold;
   font-size: 24px;
   line-height: 33px;
   color: #000000;
   margin-bottom: 5px;
+  margin-top: 20px;
+  margin-right: 25px;
+  margin-left: 25px;
 }
 
 .post ul {
@@ -173,11 +219,13 @@ label {
   border: 1px solid #eeeeee;
   box-sizing: border-box;
   border-radius: 2px;
+  padding: 12px;
 }
 
-.formulario input {
+.formulario input:focus,
+.formulario input:hover {
   outline: none;
-  padding: 12px;
+  border-color: #fe0078;
 }
 
 .formulario label {
@@ -216,8 +264,10 @@ label {
   margin: 0;
 }
 
-.comentario textarea:focus {
+.comentario textarea:focus,
+.comentario textarea:hover {
   outline: none;
+  border-color: #fe0078;
 }
 
 .formulario button {
